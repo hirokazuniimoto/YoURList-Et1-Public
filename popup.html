@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
+    <style media="screen">
+    /*マーカーアニメーション*/
+    .marker-animation.active{
+        background-position: -100% 1.2em;/*←太さを指定*/
+        color:black;
+    }
+
+    .marker-animation {
+        color: white;
+        background-image: -webkit-linear-gradient(left, transparent 50%, rgb(15,139,255,0.9) 50%);
+        background-image: -moz-linear-gradient(left, transparent 50%, rgb(255, 0, 102) 50%);
+        background-image: -ms-linear-gradient(left, transparent 50%, rgb(255, 0, 102) 50%);
+        background-image: -o-linear-gradient(left, transparent 50%, rgb(255, 0, 102) 50%);
+        background-image: linear-gradient(left, transparent 50%, rgb(255, 0, 102) 50%);
+
+        /*background:linear-gradient(transparent 60%, #FF0066 60%);*/
+        background-repeat: repeat-x;
+        background-size: 200% .8em;
+        background-position: 0 .3em;
+        transition: all 3s ease;
+        font-weight: bold;
+    }
+
+    </style>
+
+  </head>
+  <body>
+    <style media="screen">
+      body{width:400px;height:100%}
+    </style>
+    <div class="ml-3 mr-3">
+      <div class="mt-3">
+        <h3><span class="marker-animation">YoURList-Et1<span></h3>
+        <p></p>
+        <h5><span class="mt-5">YoURList-Et1 is Ready! <span></h5>
+        <p class="text-center mt-3">
+          ウェブサイト<a href="https://hirokazuniimoto.github.io/YoURList/">
+            YoURList</a>のための拡張機能です。
+          ウィンドウで開いてるタブのタイトルとURLを全て取得し、データとしてダウンロードします。
+          保存したデータはYoURListのインポートから利用できます。
+        </p>
+      </div>
+      <div class="form-group mt-2">
+        <label class="text-center mt-3">作成したいリスト名を入力して実行を押してください。
+        <span class="text-danger">リスト名は既存のものと被らないようにしてください。</span>
+        </label>
+        <input type="text"
+        class="form-control mt-3"
+        id="dir_name" value=""
+        placeholder="リスト名を入力"
+        >
+        <button class="btn btn-primary w-100 mt-3" id="btn">実行</button>
+      </div>
+      <div class="" id="message"></div>
+    </div>
+
+    <div class="copyright text-center mt-4" >
+      ©2021 made with <i class="fas fa-heart" style="font-Size:13px"></i> by
+      <a href="https://hirokazuniimoto.github.io/portfolio/" target="_blank">Hirokazu Niimoto</a>.
+    </div>
+
+    <script src="myscript.js"></script>
+  </body>
+</html>

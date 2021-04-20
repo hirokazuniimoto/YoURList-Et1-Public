@@ -1,0 +1,25 @@
+{
+  "name": "YoURList-Et1",
+  "manifest_version": 2,
+  "version": "1.0",
+
+  "icons": {
+        "32": "ダウンロードアイコン.png",
+        "48": "ダウンロードアイコン.png",
+        "128": "ダウンロードアイコン.png"
+    },
+  "browser_action": {
+      "default_title": "YoURList-Et1",
+      "default_popup": "popup.html"
+  },
+  "permissions":[
+     "tabs"
+   ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*" ],
+      "css": ["mystyles.css"],
+      "js": ["jquery-3.6.0.min.js","myscript.js"]
+    }
+  ]
+}
